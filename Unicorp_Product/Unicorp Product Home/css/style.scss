@@ -1,6 +1,6 @@
 $main-text: #071e57;
 $main-blue: #4a83fb;
-$main-green:#2ed47d;
+$main-green: #2ed47d;
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -17,6 +17,7 @@ a {
   text-decoration: none;
   color: $main-text;
 }
+
 @mixin flex($align: flex-start, $justify: flex-start, $wrap: wrap) {
   display: flex;
   justify-content: $justify;
@@ -43,44 +44,44 @@ a {
     font-weight: 600;
     @include flex(center, space-between);
     &-item {
-        position: relative;
-        transition: all .5s;
+      position: relative;
+      transition: all 0.5s;
       &:before {
         content: "";
         position: absolute;
         border-radius: 50%;
-        width: .8rem;
-        height: .8rem;
+        width: 0.8rem;
+        height: 0.8rem;
         background-color: rgb(5, 223, 5);
         left: 45%;
         top: -70%;
         transform: translateX(-50%);
       }
-      &:hover a{
-          color: $main-blue;
+      &:hover a {
+        color: $main-blue;
       }
     }
-    &-home{
-        & i{
-            font-size: 1rem;
-        }
-        @include flex(center,center)
+    &-home {
+      & i {
+        font-size: 1rem;
+      }
+      @include flex(center, center);
     }
-    &-cart{
-        position: relative;
-        & span{
-            content: '2';
-            position: absolute;
-            background-color: $main-green;
-            width: 1.5rem;
-            height: 1.5rem;
-            border-radius: 50%;
-            top: -50%;
-            right: -1rem;
-            text-align: center;
-            color: whitesmoke;
-            font-size: 1.1rem;
-        }
+    &-cart {
+      position: relative;
+      & span {
+        content: "2";
+        position: absolute;
+        background-color: $main-green;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        top: -50%;
+        right: -1rem;
+        text-align: center;
+        color: whitesmoke;
+        font-size: 1.1rem;
+      }
     }
   }
 
@@ -91,16 +92,61 @@ a {
     border: 0;
     padding: 1.1rem 2.5rem;
     cursor: pointer;
-    transition: all .3s;
-    &:hover{
-        background-color: rgba($color: $main-blue, $alpha: .8);
-        color: $main-text;
-        font-weight: 300;
+    transition: all 0.3s;
+    &:hover {
+      background-color: rgba($color: $main-blue, $alpha: 0.8);
+      color: $main-text;
+      font-weight: 300;
     }
   }
 }
 
-.banner{
-    background-image: url(../img/background.png);
-    height: 1000px;
+.banner {
+  .strong_text {
+    color: $main-blue;
+  }
+  background-image: url(../img/background.png);
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  padding: 15rem 0 5rem;
+  &_main {
+    @include flex(center, space-between);
+  }
+  &_left {
+    &-title {
+      font-size: 5rem;
+      margin: 1rem 0;
+      line-height: 8rem;
+    }
+    &-desc {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+    &-button {
+      padding: 6rem 0;
+      margin: 2rem 0;
+      @include flex(center, space-between);
+      width: 73%;
+      & img {
+        box-shadow: 3px 10px 10px rgba($color: #000000, $alpha: 0.5);
+        border-radius: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+  &_scroll {
+    text-align: center;
+    color: $main-blue;
+    cursor: pointer;
+    font-size: 1.4rem;
+    margin-top: 7rem;
+  }
+}
+
+.slide {
+  &_main {
+    width: 90.5%;
+    margin-left: auto;
+  }
 }
