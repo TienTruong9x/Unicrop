@@ -1,0 +1,106 @@
+$main-text: #071e57;
+$main-blue: #4a83fb;
+$main-green:#2ed47d;
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: "Muli", sans-serif;
+  background-color: #fefeff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: $main-text;
+}
+@mixin flex($align: flex-start, $justify: flex-start, $wrap: wrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+.wapper {
+}
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.header {
+  padding-top: 3rem;
+  @include flex(center, space-between);
+  &_logo {
+    cursor: pointer;
+  }
+  &_list {
+    width: 50%;
+    list-style: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    @include flex(center, space-between);
+    &-item {
+        position: relative;
+        transition: all .5s;
+      &:before {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        width: .8rem;
+        height: .8rem;
+        background-color: rgb(5, 223, 5);
+        left: 45%;
+        top: -70%;
+        transform: translateX(-50%);
+      }
+      &:hover a{
+          color: $main-blue;
+      }
+    }
+    &-home{
+        & i{
+            font-size: 1rem;
+        }
+        @include flex(center,center)
+    }
+    &-cart{
+        position: relative;
+        & span{
+            content: '2';
+            position: absolute;
+            background-color: $main-green;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            top: -50%;
+            right: -1rem;
+            text-align: center;
+            color: whitesmoke;
+            font-size: 1.1rem;
+        }
+    }
+  }
+
+  &_download {
+    background-color: $main-blue;
+    color: whitesmoke;
+    border-radius: 0.3rem;
+    border: 0;
+    padding: 1.1rem 2.5rem;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover{
+        background-color: rgba($color: $main-blue, $alpha: .8);
+        color: $main-text;
+        font-weight: 300;
+    }
+  }
+}
+
+.banner{
+    background-image: url(../img/background.png);
+    height: 1000px;
+}

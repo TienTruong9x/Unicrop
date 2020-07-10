@@ -1,0 +1,107 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: "Muli", sans-serif;
+  background-color: #fefeff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #071e57;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.header {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header_logo {
+  cursor: pointer;
+}
+.header_list {
+  width: 50%;
+  list-style: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header_list-item {
+  position: relative;
+  transition: all 0.5s;
+}
+.header_list-item:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #05df05;
+  left: 45%;
+  top: -70%;
+  transform: translateX(-50%);
+}
+.header_list-item:hover a {
+  color: #4a83fb;
+}
+.header_list-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header_list-home i {
+  font-size: 1rem;
+}
+.header_list-cart {
+  position: relative;
+}
+.header_list-cart span {
+  content: "2";
+  position: absolute;
+  background-color: #2ed47d;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  top: -50%;
+  right: -1rem;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 1.1rem;
+}
+.header_download {
+  background-color: #4a83fb;
+  color: whitesmoke;
+  border-radius: 0.3rem;
+  border: 0;
+  padding: 1.1rem 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.header_download:hover {
+  background-color: rgba(74, 131, 251, 0.8);
+  color: #071e57;
+  font-weight: 300;
+}
+
+.banner {
+  background-image: url(../img/background.png);
+  height: 1000px;
+}
+
+/*# sourceMappingURL=style.css.map */
