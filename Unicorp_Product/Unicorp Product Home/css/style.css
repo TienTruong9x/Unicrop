@@ -78,11 +78,15 @@ a {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-  top: -50%;
+  top: -80%;
   right: -1rem;
   text-align: center;
   color: whitesmoke;
   font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .header_download {
   background-color: #4a83fb;
