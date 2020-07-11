@@ -1,6 +1,7 @@
 $main-text: #071e57;
 $main-blue: #4a83fb;
 $main-green: #2ed47d;
+$main-desc: #748494;
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -107,13 +108,16 @@ a {
   }
   background-image: url(../img/background.png);
   width: 100%;
+  height: 100%;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: repeat-x;
   padding: 15rem 0 5rem;
   &_main {
-    @include flex(center, space-between);
+    @include flex(center, space-between, none);
   }
   &_left {
+    width: 60%;
     &-title {
       font-size: 5rem;
       margin: 1rem 0;
@@ -127,7 +131,7 @@ a {
       padding: 6rem 0;
       margin: 2rem 0;
       @include flex(center, space-between);
-      width: 73%;
+      width: 63%;
       & img {
         box-shadow: 3px 10px 10px rgba($color: #000000, $alpha: 0.5);
         border-radius: 1rem;
@@ -145,8 +149,110 @@ a {
 }
 
 .slide {
+  margin-top: 10rem;
+  background: rgb(254, 254, 254);
+  background: linear-gradient(
+    180deg,
+    rgba(254, 254, 254, 1) 0%,
+    rgba(244, 244, 244, 1) 100%
+  );
   &_main {
-    width: 90.5%;
+    width: 80.6%;
     margin-left: auto;
+  }
+  &_info {
+    color: $main-blue;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+  &_title {
+    margin: 4rem 0;
+    font-size: 5rem;
+    color: $main-text;
+  }
+  &_desc {
+    margin-bottom: 8rem;
+    font-size: 1.2rem;
+    @include flex(center, space-between);
+    &-content {
+      color: $main-desc;
+    }
+    &-action {
+      cursor: pointer;
+      @include flex(center, center);
+      & i {
+        background-color: #fff;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        box-shadow: 2px 3px 8px rgba($color: #000000, $alpha: 0.6);
+        @include flex(center, center, nowrap);
+        flex-direction: column;
+        &::before {
+          align-items: center;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  &_list {
+    @include flex(center, space-between, nowrap);
+    &-item {
+      background-color: #ffffff;
+      box-shadow: 2px 2px 20px rgba($color: gray, $alpha: 0.3);
+      padding: 3rem;
+      border-radius: 0.8rem;
+      width: calc(25% - 10rem);
+      &:nth-child(1) {
+        color: $main-blue;
+      }
+      &:nth-child(2){
+        color: #edb95f;
+      }
+      &:nth-child(3){
+        color: #45d2a7;
+      }
+      &:nth-child(4){
+        color: #d6bef4;
+      }
+      &:last-child {
+        opacity: 0.4;
+      }
+    }
+    &-icon {
+      @include flex(center, flex-start);
+      padding: 3rem;
+      & i {
+        @include flex(center, center);
+        position: relative;
+        font-size: 2.3rem;
+        &::after {
+          content: "";
+          background-color: currentColor;
+          width: 8rem;
+          height: 8rem;
+          border-radius: 50%;
+          opacity: 0.3;
+          position: absolute;
+        }
+      }
+    }
+    &-title {
+      font-size: 3rem;
+      color: $main-text;
+      padding: 4rem 0;
+      font-weight: 600;
+    }
+    &-desc {
+      font-size: 1.8rem;
+      color: gray;
+    }
+    &-learn {
+      display: block;
+      padding-top: 5rem;
+      padding-bottom: 3rem;
+      font-size: 1.4rem;
+    }
   }
 }
