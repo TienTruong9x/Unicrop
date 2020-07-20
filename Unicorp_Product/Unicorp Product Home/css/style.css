@@ -415,4 +415,115 @@ a {
   color: #748494;
 }
 
+.purchase {
+  margin-top: 10rem;
+  text-align: center;
+  background: url(../img/background3.png);
+  background-position: center;
+  padding: 5rem 0;
+}
+.purchase_switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 25%;
+  font-size: 1.3rem;
+  margin: 0 auto;
+}
+.purchase_switch .switch {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: gray;
+  width: 60px;
+  height: 30px;
+  border: 1px solid #bbb;
+  border-radius: 25px;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  transition: all 200ms;
+}
+.purchase_switch .switch:checked {
+  background-color: #4a83fb;
+}
+.purchase_switch .switch::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: mintcream;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transition: all 200ms;
+}
+.purchase_switch .switch:checked::before {
+  left: 30px;
+}
+.purchase_save {
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+.purchase_product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 10rem;
+}
+.purchase_product-box {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5rem;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+}
+.purchase_product-box button {
+  margin-top: 3rem;
+}
+.purchase_product-title {
+  color: #2ed47d;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.purchase_product-desc {
+  padding: 3rem 0;
+  font-size: 1.3rem;
+}
+.purchase_product-price {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 5rem;
+}
+.purchase_product-price sup {
+  color: #748494;
+  font-size: 2rem;
+  margin-right: 1.3rem;
+}
+.purchase_product-price span {
+  font-size: 1.4rem;
+  color: #748494;
+  margin-left: 1.3rem;
+}
+.purchase_feature-item {
+  padding-bottom: 2.5rem;
+  color: #748494;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.purchase .ative {
+  color: #071e57;
+  font-weight: bold;
+}
+.purchase_footer {
+  padding-top: 7rem;
+  font-size: 1.3rem;
+  color: #748494;
+}
+.purchase_footer a {
+  color: #4a83fb;
+  font-weight: 600;
+  line-height: 4rem;
+}
+
 /*# sourceMappingURL=style.css.map */

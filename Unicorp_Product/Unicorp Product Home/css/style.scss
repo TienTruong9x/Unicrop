@@ -286,103 +286,212 @@ a {
   }
 }
 
-.started{
+.started {
   background-image: url(../img/background3.png);
   background-position: center;
   background-size: cover;
   padding: 6rem;
-  @include flex(center, center, );
-  &_main{
+  @include flex(center, center);
+  &_main {
     text-align: center;
     padding-top: 5rem;
-
   }
-  &_title{
+  &_title {
     font-size: 5rem;
     font-weight: bold;
     margin: 4rem 0;
     color: $main-text;
   }
-  &_desc{
+  &_desc {
     font-size: 1.7rem;
     color: $main-gray;
     margin-bottom: 7rem;
     line-height: 3.5rem;
   }
-  & button{
+  & button {
     margin-top: 2.5rem;
     outline: none;
   }
 }
 
-.iphone{
-  &_item{
+.iphone {
+  &_item {
     margin-top: 8rem;
-    @include flex(center,space-between , );
-    &-left{
+    @include flex(center, space-between);
+    &-left {
       width: calc(50% - 3rem);
     }
-    &-right{
+    &-right {
       width: calc(50% - 3rem);
     }
-    &:nth-child(2){
-     justify-content: center;
-     font-size: 3.2rem;
+    &:nth-child(2) {
+      justify-content: center;
+      font-size: 3.2rem;
     }
-    &:nth-child(3){
-      .iphone_item-left{
-       order: 2;
-       position: relative;
-       &  i{
-         position: absolute;
-         top:50%;
-         left: 50%;
-         transform: translate(-50%,-55%);
-         background-color: #fff;
-         width: 8rem;
-         height: 8rem;
-         @include flex(center, center, );
-         border-radius: 50%;
+    &:nth-child(3) {
+      .iphone_item-left {
+        order: 2;
+        position: relative;
+        & i {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -55%);
+          background-color: #fff;
+          width: 8rem;
+          height: 8rem;
+          @include flex(center, center);
+          border-radius: 50%;
           font-size: 2rem;
           cursor: pointer;
           color: $main-blue;
-       }
+        }
       }
-      .iphone_item-right{
+      .iphone_item-right {
         order: 1;
       }
     }
-    .card{
+    .card {
       margin-top: 3rem;
     }
-    .card-header{
-      @include flex(center,space-between , );
+    .card-header {
+      @include flex(center, space-between);
       padding: 1.5rem;
       cursor: pointer;
-      transition: .3s background;
+      transition: 0.3s background;
       font-size: 1.3rem;
-      &:hover{
+      &:hover {
         background-color: $main-blue;
         color: white;
       }
     }
 
-    &-info{
+    &-info {
       color: #4a83fb;
-    font-size: 1.6rem;
-    text-transform: uppercase;  
+      font-size: 1.6rem;
+      text-transform: uppercase;
     }
-    &-title{
+    &-title {
       margin: 4rem 0;
       font-size: 5rem;
-    color: #071e57;
-    font-family: "Gilroy-Medium";
-    font-weight: 600;
+      color: #071e57;
+      font-family: "Gilroy-Medium";
+      font-weight: 600;
     }
-    &-desc{
+    &-desc {
       margin-bottom: 5rem;
       font-size: 1.4rem;
       color: $main-gray;
+    }
+  }
+}
+
+.purchase {
+  margin-top: 10rem;
+  text-align: center;
+  background: url(../img/background3.png);
+  background-position: center;
+  padding: 5rem 0;
+  &_switch {
+    @include flex(center, space-between, wrap);
+    width: 25%;
+    font-size: 1.3rem;
+    margin: 0 auto;
+    .switch {
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: gray;
+      width: 60px;
+      height: 30px;
+      border: 1px solid #bbb;
+      border-radius: 25px;
+      outline: none;
+      position: relative;
+      cursor: pointer;
+      transition: all 200ms;
+    }
+    .switch:checked {
+      background-color: $main-blue;
+    }
+
+    .switch::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: mintcream;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      transition: all 200ms;
+    }
+    .switch:checked::before {
+      left: 30px;
+    }
+  }
+
+  &_save {
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+
+  &_product {
+    @include flex(center, space-between);
+    padding-top:10rem;
+    &-box {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 5rem;
+      box-shadow: 2px 3px 10px rgba($color: #000000, $alpha: 0.3);
+      & button{
+        margin-top: 3rem;
+      }
+    }
+    &-title {
+      color: $main-green;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+    &-desc {
+      padding: 3rem 0;
+      font-size: 1.3rem;
+    }
+    &-price {
+      font-size: 5rem;
+      font-weight: bold;
+      margin-bottom: 5rem;
+      & sup {
+        color: $main-gray;
+        font-size: 2rem;
+        margin-right: 1.3rem;
+      }
+      & span {
+        font-size: 1.4rem;
+        color: $main-gray;
+        margin-left: 1.3rem;
+      }
+    }
+  }
+  &_feature{
+    &-item{
+      padding-bottom: 2.5rem;
+      color: $main-gray;
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+  }
+  .ative{
+    color: $main-text;
+    font-weight: bold;
+  }
+  &_footer{
+    padding-top: 7rem;
+    font-size: 1.3rem;
+    color: $main-gray;
+    & a {
+      color: $main-blue;
+      font-weight: 600;
+      line-height: 4rem;
     }
   }
 }
