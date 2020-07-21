@@ -495,3 +495,182 @@ a {
     }
   }
 }
+
+.review{
+  position: relative;
+  &_main{
+    padding: 7rem 0;
+  }
+  &_title{
+    text-align: center;
+    color: $main-text;
+    font-size: 3.3rem;
+    margin-bottom: 3rem;
+  }
+  &_user{
+    &-list{
+    @include flex(center,space-between ,nowrap);
+    margin-top: 9rem;
+    }
+    &-item{
+      background: #fff;
+      padding: 3rem;
+      box-shadow: 1px 4px 10px rgba($color: #000000, $alpha: .5);
+      border-radius: 5px;
+      width: calc(100% / 3 - 4rem);
+      &br{
+        margin-top: 1rem;
+      }
+    }
+  }
+  &_item{
+    &-content{
+      color: $main-gray;
+      font-size: 1.3rem;
+      line-height: 2.5rem;
+    }
+    &-user{
+      @include flex(center,space-between ,nowrap );
+      margin-top: 2rem;
+      & img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+
+      }
+    }
+  }
+  &_right{
+    flex-grow: 1;
+    padding-left: 3rem;
+    &-name{
+      color: $main-blue;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    &-positon{
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      color: $main-gray;
+      padding: .7rem 0 1rem;
+    }
+    &-star{
+      color: #edb95f;
+    }
+  }
+
+  &_dot{
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.7rem;
+    .ative{
+      font-size: 1rem;
+      color: $main-blue;
+    }
+  }
+
+  &_partner{
+    @include flex(center,space-between , );
+    padding: 0 10rem;
+    padding-bottom: 30rem;
+  }
+
+  &_banner{
+    padding: 10rem;
+    background: url(../img/background4.png);
+    position: absolute;
+    bottom: -10rem;
+    border-radius: 5px;
+    width: 1170px;
+    box-shadow: 3px 4px 10px rgba($color: #000000, $alpha: .3);
+    &-title{
+     font-size: 4rem;
+     color: $main-text;
+     margin-bottom: 2rem;
+    }
+    &-desc{
+      color: $main-gray;
+      line-height: 2.5rem;
+      width: 50%;
+      font-size: 1.3rem;
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.footer{
+  background: #263238;
+  padding-top: 17rem;
+  color: $main-gray;
+  &_main{
+    @include flex(flex-start,space-between, nowrap);
+  }
+  &_nav{
+    width: calc(100% / 5 - 1rem);
+    padding-bottom: 10rem;
+    &-title{
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 2em;
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+    &-item{
+      padding: .5rem 0;
+      font-size: 1.2rem;
+      & i {
+        padding-right: .5rem;
+      }
+      &-green{
+        color: $main-green;
+      }
+      &-white{
+        color: #fff;
+      }
+      &-blue{
+        color: #3fa7f1;
+      }
+    }
+  }
+
+  &_item{
+    &-blue{
+    color: #fff;
+    background: $main-blue;
+    padding: .4rem;
+    border-radius: 3px;
+    }
+    
+    &-green{
+      color: #fff;
+    background: $main-green;
+    padding: .4rem;
+    border-radius: 3px;
+    }
+
+  }
+  &_subcriber{
+    @include flex(center,center , );
+    & input {
+      padding: 1.1rem .5rem 1rem 1rem;
+      border-radius: 4px;
+      &::placeholder{
+        font-style: italic;
+      }
+    }
+  }
+  &_policy{
+    padding: 1rem 0;
+    @include flex(center,space-between , );
+    &-right{
+      @include flex(center,space-between , );
+    }
+    &-item{
+      margin-right: 1rem;
+    }
+  }
+  & hr{
+    color: $main-gray;
+    background-color: $main-gray;
+  }
+}
